@@ -7,7 +7,7 @@
         <preference name="phonegap-version" value="3.3.0" />
 	<preference name="target-device" value="handset" /> 
 
-    <name>DesignteezApp</name>
+    <name>PrintMyTeez</name>
 
     <description>
         My app Description
