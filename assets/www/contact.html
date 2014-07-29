@@ -54,7 +54,8 @@ function validateEmail()
    dotpos = emailID.lastIndexOf(".");
    if (atpos < 1 || ( dotpos - atpos < 2 )) 
    {
-       alert("Please enter correct email ID")
+      alert("Please enter correct email ID")
+	//navigator.notification.alert("Please enter correct email ID");
        document.myForm.email.focus() ;
        return false;
    }
@@ -68,6 +69,8 @@ function validate()
   {
 	//alert("Mello");
    // document.myForm.submit(); //first submit
+	//navigator.notification.alert("Thank You for your feedback.");
+	 //navigator.notification.vibrate(2000);
 	alert("Thank You for your feedback.");
     document.myForm.reset(); //and then reset the form values
   }
@@ -88,6 +91,7 @@ if( document.myForm.name.value == "" )
             if(!ck_password.test(nametxt))
             {
                 alert("Invalid name!");
+		//navigator.notification.alert("Invalid name!");
 		document.myForm.name.focus() ;
 		return false;
             }
@@ -96,6 +100,7 @@ if( document.myForm.name.value == "" )
    if( document.myForm.email.value == "" )
    {
      alert( "Please provide your Email!" );
+	//navigator.notification.alert("Invalid Email!");
      document.myForm.email.focus() ;
      return false;
    }else{
@@ -103,12 +108,13 @@ if( document.myForm.name.value == "" )
      var ret = checkEmail();
      if( ret == false )
      {
-	alert("Invalid email ID")
+	alert("Invalid email ID");
+	//navigator.notification.alert("Invalid Email!");
 	document.myForm.email.focus() ;
         return false;
      }
    }
-
+ 
    if( document.myForm.subject.value == "" )
    {
 
@@ -118,7 +124,8 @@ if( document.myForm.name.value == "" )
 	nametxt = document.myForm.subject.value;
             if(!ck_psword.test(nametxt))
             {
-                alert("Invalid subject! ");
+              alert("Invalid subject! ");
+		//navigator.notification.alert("Invalid subject! ");
 		document.myForm.subject.focus() ;
 		return false;
             }
@@ -128,6 +135,7 @@ if( document.myForm.name.value == "" )
    if( document.myForm.message.value == "" )
    {
      alert( "Please put your message!" );
+		//navigator.notification.alert("Please put your message! ");
      document.myForm.message.focus() ;
      return false;
    } else {
@@ -135,7 +143,8 @@ if( document.myForm.name.value == "" )
 	nametxt = document.myForm.message.value;
             if(!ck_password.test(nametxt))
             {
-                alert("Invalid Message! ");
+          alert("Invalid Message! ");
+		//navigator.notification.alert("Please put your message! ");
 		document.myForm.message.focus() ;
 		return false;
             }
